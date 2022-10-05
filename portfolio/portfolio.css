@@ -1,0 +1,759 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+nav{
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    /* border-bottom: solid 2px black; */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1vh;
+}
+ nav .logo{
+    color: #ff9500;
+    text-transform: capitalize;
+    font-size: 80px;
+    /* font-weight: 600; */
+    font-family: Brush Script MT;
+    /* font-family: Jazz LET, fantasy; */
+    margin-left: 2.5%;
+    text-shadow: 10px 10px 6px #ffd00016;
+    cursor: default;
+ }
+ nav ul{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 5%;
+    position: relative;
+ }
+nav ul li{
+    width: 20%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 18px;
+    /* background-color: blue; */
+    border: none;
+    border-radius: 15px;
+    list-style: none;
+    margin-right: 2%;
+    transition: 0.5s;
+    z-index: 1;
+    cursor: grab;
+}
+nav ul li a{
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Allerta Stencil', sans-serif;
+    color: #ff9500;
+    transition: 0.5s;
+    cursor: grab;
+}
+.active_nav{
+    width: 20%;
+    height: 90%;
+    background-color: #ff9500;
+    position: absolute;
+    left: 0%;
+    bottom: 190%;
+    border: none;
+    border-radius: 15px;
+    z-index: 0;
+    transition: 0.5s;
+}
+.active_nav1{
+    width: 20%;
+    height: 90%;
+    background-color: #ff9500;
+    position: absolute;
+    left: 39%;
+    bottom: 190%;
+    border: none;
+    border-radius: 15px;
+    z-index: 0;
+    transition: 0.5s;
+}
+.active_nav2{
+    width: 20%;
+    height: 90%;
+    background-color: #ff9500;
+    position: absolute;
+    left: 78%;
+    bottom: 190%;
+    border: none;
+    border-radius: 15px;
+    z-index: 0;
+    transition: 0.5s;
+}
+header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(BG.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    /* padding-top: 15vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: aliceblue; */
+    z-index: 100;
+}
+header div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+    position: relative;
+    overflow: hidden;
+    animation: moving 2s alternate;
+    text-align: center;
+}
+@keyframes moving{
+    from{
+        transform: translateX(-190%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+header div p{
+    font-size: 50px;
+    font-weight: 500;
+    font-family: 'Allerta Stencil', sans-serif;
+    text-transform: capitalize;
+    transition: 1s;
+    color: #ffe0b4;
+}
+header div p span{
+    color: #ff9500;
+}
+header div button{
+    margin-top: 4%;
+    width: 28%;
+    height: 8%;
+    border: solid 3px #ff9500;
+    background: none;
+    padding: 5px 10px;   
+    transition: 1s;
+    cursor: grab;
+    position: absolute;
+    bottom: 25%;
+    animation: move1 7s alternate;
+}
+@keyframes move1{
+    from{
+        left: 150%;
+    }
+    to{
+        left: 36%;
+    }
+}
+header div button p{
+    transition: 1s;
+    font-weight: 600px;
+    font-family: 'Allerta Stencil', sans-serif;
+    color: #ffe0b4;
+    font-size: 20px;
+}
+/* header div button:hover{
+    background-color: #ff9500;
+    color: black;
+} */
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+    border: 10px solid #ffeed6;
+    box-shadow: inset 0 0 2.5px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ff9500;
+    /* border-radius: 1rem; */
+    opacity: 0.5;
+}
+.main{
+    width: 100%;
+    min-height: 400vh;
+    background-color: #ffe0b4;
+    position: relative;
+}
+.about1{
+    width: 45%;
+    margin: auto;
+    padding-top: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid #000;
+    transform: translateX(-180%);
+    transition: 0.75s;
+}
+.about1 p{
+    font-size: 50px;
+    font-family: 'Allerta Stencil', sans-serif;
+    font-weight: 600;
+    color: #000;
+    text-transform: uppercase;
+    margin-bottom: 1%;
+
+}
+.my_about{
+    width: 90%;
+    height: 45vh;
+    margin: auto;
+    margin-top: 2%;
+    /* background-color: black; */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    overflow-x: hidden;
+}
+.my_about div{
+    width: 23%;
+    margin-right: 2%;
+    height: 100%;
+    /* background-color: #000; */
+    border-radius: 20px;
+    transform: translateY(-110%);
+    transition: 1s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.my_about div img{
+    width: 45%;
+    height: 40%;
+    border-radius: 50%;
+}
+.my_about div h3{
+    font-size: 35px;
+    font-weight: 600;
+    font-family: 'Allerta Stencil', sans-serif;
+    text-transform: uppercase;
+    color: #000;
+}
+.my_about div p{
+    font-size: 18px;
+    font-weight: 400px;
+    font-family: 'Allerta Stencil', sans-serif;
+    text-transform: capitalize;
+    opacity: 0.7;
+    text-align: center;
+}
+.skills{
+    width: 95%;
+    height: 70vh;
+    margin: auto;
+    margin-top: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.head2{
+    width: 45%;
+    margin: auto;
+    padding-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid #000;
+    transform: translateX(-180%);
+    transition: 0.75s;
+}
+.head2 p{
+    font-size: 50px;
+    font-family: 'Allerta Stencil', sans-serif;
+    font-weight: 600;
+    color: #000;
+    text-transform: uppercase;
+    overflow: hidden;
+    margin-bottom: 1%;
+}
+.skills .who_me{
+    width: 50%;
+    height: 100%;
+    padding: 0% 2%;
+    /* background-color: #ffffff; */
+    /* transform: translateX(-180%); */
+
+    transition: 1s;
+}
+.ami{
+    font-size: 50px;
+    font-weight: 500px;
+    text-transform: capitalize;
+    color: #000;
+    margin-top: 3%;
+    transform: translateX(-180%);
+    transition: 1s;
+    
+}
+.bb{
+    background-color: #000;
+    width: 40%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6%;
+    transform: translateX(-180%);
+    transition: 1s;
+}
+.ami1{
+    margin-bottom: 4%;
+    font-size: 30px;
+    font-weight: 400;
+    color: #ff9500;
+    text-transform: capitalize;
+    margin-top: 5%;
+    transform: translateX(-180%);
+    transition: 1s;
+}
+.ami1 span{
+    color: #ffe0b4;
+}
+.ami2{
+    margin-bottom: 4%;
+    font-size: 20px;
+    font-weight: 400;
+    color: #000;
+    text-transform: capitalize;
+    margin-top: 5%;
+    transform: translateX(-180%);
+    transition: 1s;
+}
+.aa{
+    width: 80%;
+    letter-spacing: 2px;
+    margin-top: 8%;
+}
+.ami3{
+    margin-bottom: 4%;
+    font-size: 30px;
+    font-weight: 400;
+    color: #000;
+    text-transform: capitalize;
+    margin-top: 5%;
+    opacity: 0.7;
+    transform: translateX(-180%);
+    transition: 1s;
+    text-align: start;
+}
+.skills .my_skills{
+    width: 50%;
+    height: 100%;
+    transition: 1s;
+    padding: 0% 2%;
+}
+.skills .my_skills p{
+    font-size: 25px;
+    font-family: 'Allerta Stencil', sans-serif;
+    font-weight: 600;
+    color: #000;
+    margin-top: 3%;
+    text-transform: uppercase;
+    transition: 1s;
+    transform: translateX(180%);
+}
+.skills .my_skills div{
+    width: 95%;
+    height: 5%;
+    border-radius: 2px;
+    background-color: #ffc26c96;
+    text-align: center;
+    transition: 1s;
+    transform: translateX(180%);
+}
+.skills .my_skills div p{
+    font-size: 15px;
+    font-weight: 400;
+    transform: translateX(0%);
+    opacity: 1;
+}
+.skills .my_skills div div{
+    height: 100%;
+    width: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #000;
+    border-radius: 2px;
+    transform: translateX(0%);
+    transition: 1s;
+}
+.load_1 .act4{
+    height: 100%;
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    border-radius: 2px;
+}
+.skills .my_skills div div p{
+    color: #ffe0b4;
+    font-size: 15px;
+    font-weight: 400;
+    opacity: 0;
+    display: inline-block;
+    padding-bottom: 3%;
+}
+.work1{
+    width: 45%;
+    margin: auto;
+    padding-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid #000;
+    transform: translateX(-180%);
+    transition: 0.75s;
+}
+.work1 p{
+    font-size: 50px;
+    font-family: 'Allerta Stencil', sans-serif;
+    font-weight: 600;
+    color: #000;
+    text-transform: uppercase;
+    overflow: hidden;
+    margin-bottom: 1%;
+}
+.my_work1{
+    width: 95%;
+    margin: auto;
+    margin-top: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.my_work1 div{
+    width: 49%;
+    height: 40vh;
+    margin-bottom: 0.8%;
+    /* background-color: #000; */
+    position: relative;
+    overflow: hidden;
+    transition: 1s;
+}
+.my_work1 div .hover{
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: #ff950069;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.my_work1 div .hover button{
+    padding: 5px 15px;
+    font-family: 'Allerta Stencil', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    background: none;
+    border: 3px solid #000;
+    border-radius: 5px;
+    color: #ffeed6;
+    transition: 1s;
+}
+.my_work1 div img{
+    width: 100%;
+    height: 100%;
+}
+.w1{
+    transform: translateX(-180%);
+    transition: 1s;
+}
+.w2{
+    transform: translateX(180%);
+    transition: 1s;
+}
+.w3{
+    transform: translateX(-180%);
+    transition: 1s;
+}
+.w4{
+    transform: translateX(180%);
+    transition: 1s;
+}
+.w5{
+    transform: translateX(-180%);
+    transition: 1s;
+}
+.w6{
+    transform: translateX(180%);
+    transition: 1s;
+}
+.contacts{
+    width: 45%;
+    margin: auto;
+    padding-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid #000;
+    transform: translateX(-180%);
+    transition: 0.75s;
+}
+.contacts p{
+    font-size: 50px;
+    font-family: 'Allerta Stencil', sans-serif;
+    font-weight: 600;
+    color: #000;
+    text-transform: uppercase;
+    overflow: hidden;
+    margin-bottom: 1%;
+}
+.call{
+    width: 58%;
+    margin: auto;
+    padding-top: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-180%);
+    transition: 0.75s;
+}
+.call p{
+    font-size: 48px;
+    font-family: 'Allerta Stencil', sans-serif;
+    font-weight: 600;
+    color: #000;
+    text-transform: uppercase;
+    overflow: hidden;
+    margin-bottom: 1%;
+}
+.my_contact{
+    width: 95%;
+    height: 44vh;
+    margin: auto;
+    margin-top: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.my_contact div{
+    width: 45%;
+    height: 15vh;
+    /* border: 3px solid #000; */
+    border-radius: 5px;
+    /* background-image: url(BG.jpg); */
+    box-shadow: 0px 0px 2px #000;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.gmail{
+    transform: translateX(-180%);
+    transition: 1s;
+}
+.insta{
+    transform: translateX(180%);
+    transition: 1s;
+}
+.face{
+    transform: translateX(-180%);
+    transition: 1s;
+}
+.wats{
+    transform: translateX(180%);
+    transition: 1s;
+}
+.my_contact div img{
+    margin-left: 2%;
+    width: 20%;
+    height: 100%;
+}
+.face .facee{
+    margin-left: 4%;
+    width: 15%;
+    height: 100%;
+}
+.wats .wates{
+    margin-left: 4%;
+    width: 15%;
+    height: 85%;
+}
+.my_contact div p{
+    font-size: 32px;
+    font-weight: 600;
+    font-family: 'Allerta Stencil', sans-serif;
+    color: #ff9500;
+}
+.my_contact div span{
+    color: #000;
+}
+.p_e{
+    margin-right: 2%;
+}
+.p_f{
+    margin-right: 21%;
+}
+.p_i{
+    margin-right: 35%;
+}
+.p_w{
+    margin-right: 18%;
+}
+.my_contact div p a{
+    text-decoration: none;
+}
+.the_end{
+    margin-top: 5%;
+    width: 100%;
+    height: 10vh;
+    background-image: url(BG.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.the_end p{
+
+    padding: 0%;
+    margin: 0%;
+    font-family: 'Allerta Stencil', sans-serif;
+    box-sizing: border-box;
+    font-weight: 500;
+    color: #ff9500;
+}
+.the_end p span{
+    color: #ffeed6;
+    font-weight: 600;
+}
+
+@media (min-width:0px) and (max-width:1185px){
+
+    nav .logo{
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li{
+        width: 33%;
+        text-align: center;
+        margin-right: 0%;
+    }
+
+    nav ul{
+        width: 100%;
+        text-align: center;
+        margin-left: 5%;
+    }
+
+    ul div{
+        display: none;
+    }
+
+    header div p{
+        font-size: 30px;
+        font-weight: 500px;
+    }
+
+    header div button{
+        width: 40%;
+    }
+
+    .my_about div{
+        width: 80%;
+        height: 25%;
+        margin: auto;
+        margin-right: 10%;
+    }
+
+    .my_about{
+        height: 200vh;
+    }
+
+    .skills .who_me{
+        width: 100%;
+        height: 50%;
+        margin: auto;
+    }
+
+    .skills{
+        width: 100%;
+        height: 250%;
+        flex-wrap: wrap;
+    }
+
+    .skills .my_skills{
+        width: 100%;
+        height: 50%;
+        margin: auto;
+        border-top: #000 2px solid;
+    }
+
+    .my_work1 div{
+        width: 100%;
+        height: 25%;
+    }
+
+    .contacts{
+        width: 85%;
+    }
+
+    .call{
+        width: 88%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .my_contact div{
+        width: 98%;
+        margin-bottom: 2%;
+    }
+
+    .my_contact{
+        width: 100%;
+        height: 88vh;
+    }
+
+    .my_contact div p{
+        font-size: 25px;
+        font-weight: 600;
+        font-family: 'Allerta Stencil', sans-serif;
+        color: #ff9500;
+    }
+
+    .head2{
+        width: 80%;
+    }
+
+    .bb{
+        width: 60%;
+    }
+
+    .work1{
+        width: 80%;
+    }
+
+}
